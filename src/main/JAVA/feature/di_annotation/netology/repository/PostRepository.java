@@ -2,13 +2,14 @@ package feature.di_annotation.netology.repository;
 
 import feature.di_annotation.netology.model.Post;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
-@Configuration
+@Repository
 public class PostRepository {
     private final AtomicLong counter = new AtomicLong();
     private final ConcurrentHashMap<Long, Post> posts = new ConcurrentHashMap<>();

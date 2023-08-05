@@ -4,9 +4,10 @@ import feature.di_annotation.netology.exception.NotFoundException;
 import feature.di_annotation.netology.model.Post;
 import feature.di_annotation.netology.repository.PostRepository;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Configuration
+@Service
 public class PostService {
   private final PostRepository repository;
 
@@ -30,4 +31,3 @@ public class PostService {
     return  repository.removeById(id);
   }
 }
-

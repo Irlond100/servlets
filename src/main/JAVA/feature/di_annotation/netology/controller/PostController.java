@@ -3,13 +3,13 @@ package feature.di_annotation.netology.controller;
 import com.google.gson.Gson;
 import feature.di_annotation.netology.model.Post;
 import feature.di_annotation.netology.service.PostService;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Reader;
 
-@Configuration
+@Controller
 public class PostController {
     public static final String APPLICATION_JSON = "application/json";
     private final PostService service;
